@@ -1,0 +1,187 @@
+#include <iostream>
+#include "Header.h"
+using namespace std;
+using namespace ext;
+struct Student
+{
+	int Id;
+	int Grade;
+	string Name;
+};
+struct Agent
+{
+	int monthlySales[12];
+};
+
+int main() {
+	Student Dannie[100];
+	int kol = 100;//menyat' vmeste s massivom
+
+
+	//upr1
+	 /*
+   //vvod s klaviaturi
+	 //for (int i = 0; i < 100; ++i)
+	 //{
+		// cout << "Vvedite dannie studenta ¹ " << i << endl;
+		// cout << "Vvedite ID, Grade, Name cherez probel: ";
+		// cin >> Dan[i].Id>>Dan[i].Grade>>Name[i];
+	 //}
+   // vvod random
+	 for (int i = 0; i < 100; ++i)
+	 {
+		 int length = GetRandomValue(3, 6);
+		 Dan[i].Grade= GetRandomValue(1, 100);
+		 Dan[i].Id = GetRandomValue(1, 1000);
+		 for (int j = 0; j < length; ++j)
+		 {
+		Name[i][j] += GetRandomValue('a', 'z');
+		 }
+	 }
+
+
+	 cout << "Po kakomu kriteriu sortirovka?";
+	string a;
+		 cin >> a;
+
+
+		 if (a == "Id")
+		 {
+			 for (int i = 0; i <100; ++i)
+			 {
+				 if (Dan[i].Id > Dan[i + 1].Id)
+				 {
+					 reverse(Dan[i].Id, Dan[i + 1].Id);
+				 }
+			 }
+		 }
+
+
+		 if (a == "Grade")
+		 {
+			 for (int i = 0; i < 100; ++i)
+			 {
+				 if (Dan[i].Grade > Dan[i + 1].Grade)
+				 {
+					 reverse(Dan[i].Grade, Dan[i + 1].Grade);
+				 }
+			 }
+		 }
+
+
+		 if (a == "Name")
+		 {
+			 for (int i = 0; i < 100; ++i)
+			 {
+				 for (int j = 0; j < 6; ++j)
+				 {
+					 if (Name[i][j] > Name[i][j + 1])
+					 {
+						 reverse(Name[i], Name[i]);
+						 break;
+					}
+				 }
+			 }
+
+			 for (int i = 0; i < 100; ++i)
+			 {
+				 for (int j = 0; j < 6; ++j)
+				 {
+					 Dan[i].Name += Name[i][j];
+				 }
+			 }
+		 }*/
+		 //upr2
+	/*
+	int t;
+	for (int i = 0; i < 100; ++i)
+	{
+		Dannie[i].Grade = GetRandomValue(1, 100);
+	}
+	for (int i = 0; i < 99; ++i)
+	{
+		for (int j = 0; j < 99 - i; ++j)
+		{
+			if (Dannie[j].Grade > Dannie[j + 1].Grade)
+			{
+				//reverse(Dannie[j].Grade, Dannie[j + 1].Grade);
+				t = Dannie[j].Grade;
+				Dannie[j].Grade = Dannie[j + 1].Grade;
+				Dannie[j + 1].Grade = t;
+			}
+		}
+	}
+
+
+	int b = kol * 0.26;//26 chelovek luchshe 25%(25 chelovel)
+	cout << Dannie[26].Grade << endl;
+	int c = kol * 0.51;//anologichno dlya 50%
+	cout << Dannie[51].Grade << endl;
+	int q = kol * 0.76;//anologichno dlya 75%
+	cout << Dannie[76].Grade << endl;
+	*/
+//upr3
+/*
+	int a = 0;
+	int temp;
+	int z = 0;
+	int n = 0;
+	int mediana[10];
+	Agent agent[10];
+	for (int i = 0; i < 10; ++i) {
+		z = 0;
+		temp = 0;
+		a = 0;
+		n = 0;
+		cout << endl << i<<"   ";
+		for (int j = 0; j < 12; ++j) {
+
+			a = GetRandomValue(0, 1);
+
+			if (a == 1) {
+				agent[i].monthlySales[j] = GetRandomValue(100, 1000);
+			}
+			else {
+				agent[i].monthlySales[j] = -1;
+			}
+		}
+
+		for (int j = 0; j < 11; ++j) {
+			for (int q = 0; q < 11; ++q) {
+				if (agent[i].monthlySales[q] < agent[i].monthlySales[q+ 1]) {
+					
+					temp = agent[i].monthlySales[q];
+					agent[i].monthlySales[q] = agent[i].monthlySales[q + 1];
+					agent[i].monthlySales[q + 1] = temp;
+				}
+			}			
+		}
+
+		for (int j = 0; j < 12; ++j) {
+			cout  << agent[i].monthlySales[j] << "   ";
+		}
+
+		for (int j = 0; j < 12; ++j) {
+			if (agent[i].monthlySales[j] == -1) {
+				z += 1;
+			}
+		}
+		cout << z<<endl;
+		if ((z % 2)==0)
+		{
+			n = (12 - z) / 2;
+		mediana[i] = (agent[i].monthlySales[n-1] + agent[i].monthlySales[n ]) / 2;
+		cout << endl << i << " - " << mediana[i];
+	    }
+		else
+		{
+			n = (12 - z) - ((12 - z) / 2);
+			mediana[i] = agent[i].monthlySales[n-1];
+			cout << endl << i << " - " << mediana[i];
+		}
+	}
+	*/
+
+
+
+}
