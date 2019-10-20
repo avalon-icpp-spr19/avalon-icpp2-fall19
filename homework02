@@ -20,14 +20,12 @@ int main() {
 
 	//upr1
 	 /*
-   //vvod s klaviaturi
 	 //for (int i = 0; i < 100; ++i)
 	 //{
 		// cout << "Vvedite dannie studenta ¹ " << i << endl;
 		// cout << "Vvedite ID, Grade, Name cherez probel: ";
 		// cin >> Dan[i].Id>>Dan[i].Grade>>Name[i];
 	 //}
-   // vvod random
 	 for (int i = 0; i < 100; ++i)
 	 {
 		 int length = GetRandomValue(3, 6);
@@ -128,11 +126,9 @@ int main() {
 	int n = 0;
 	int mediana[10];
 	Agent agent[10];
+	
 	for (int i = 0; i < 10; ++i) {
 		z = 0;
-		temp = 0;
-		a = 0;
-		n = 0;
 		cout << endl << i<<"   ";
 		for (int j = 0; j < 12; ++j) {
 
@@ -166,7 +162,7 @@ int main() {
 				z += 1;
 			}
 		}
-		cout << z<<endl;
+		
 		if ((z % 2)==0)
 		{
 			n = (12 - z) / 2;
