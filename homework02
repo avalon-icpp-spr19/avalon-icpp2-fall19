@@ -45,49 +45,53 @@ int main() {
 
 		 if (a == "Id")
 		 {
-			 for (int i = 0; i <100; ++i)
+			 for (int i = 0; i <99; ++i){
+			 for (int j = 0; j <99 - i; ++j)
 			 {
-				 if (Dan[i].Id > Dan[i + 1].Id)
+				 if (Dan[j].Id > Dan[j + 1].Id)
 				 {
-					 reverse(Dan[i].Id, Dan[i + 1].Id);
+				 Student t = Dan[j];
+				 Dan[j]=Dan[j + 1];
+				 Dan[j + 1] = t;
 				 }
+			 }
 			 }
 		 }
 
 
 		 if (a == "Grade")
 		 {
-			 for (int i = 0; i < 100; ++i)
+			 for (int i = 0; i <99; ++i){
+			 for (int j = 0; j <99 - i; ++j)
 			 {
-				 if (Dan[i].Grade > Dan[i + 1].Grade)
+				 if (Dan[j].Grade > Dan[j + 1].Grade)
 				 {
-					 reverse(Dan[i].Grade, Dan[i + 1].Grade);
+				 Student t = Dan[j];
+				 Dan[j]=Dan[j + 1];
+				 Dan[j + 1] = t;
 				 }
+			 }
 			 }
 		 }
 
 
 		 if (a == "Name")
 		 {
-			 for (int i = 0; i < 100; ++i)
+		 for(int q = 0; q<99;++q){
+			 for (int i = 0; i < 99; ++i)
 			 {
 				 for (int j = 0; j < 6; ++j)
 				 {
 					 if (Name[i][j] > Name[i][j + 1])
 					 {
-						 reverse(Name[i], Name[i]);
-						 break;
+				           Student t = Dan[j];
+				           Dan[j]=Dan[j + 1];
+				           Dan[j + 1] = t;
 					}
 				 }
 			 }
+                  }
 
-			 for (int i = 0; i < 100; ++i)
-			 {
-				 for (int j = 0; j < 6; ++j)
-				 {
-					 Dan[i].Name += Name[i][j];
-				 }
-			 }
 		 }*/
 		 //upr2
 	/*
@@ -103,9 +107,9 @@ int main() {
 			if (Dannie[j].Grade > Dannie[j + 1].Grade)
 			{
 				//reverse(Dannie[j].Grade, Dannie[j + 1].Grade);
-				t = Dannie[j].Grade;
-				Dannie[j].Grade = Dannie[j + 1].Grade;
-				Dannie[j + 1].Grade = t;
+				t = Dannie[j];
+				Dannie[j] = Dannie[j + 1];
+				Dannie[j + 1] = t;
 			}
 		}
 	}
