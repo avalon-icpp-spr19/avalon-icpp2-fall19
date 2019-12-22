@@ -1,6 +1,7 @@
 #include <iostream>
 #include <random>
 #include "Main_Header.h"
+using namespace std;
 namespace lem
 {
 	int GetRandomValue(int min, int max, bool isDebugMode)//Stolen from Extention.h
